@@ -1,0 +1,90 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %} 
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+<style>
+
+    .icon {
+        font-size: calc(82px + 1vw);
+        }
+    
+    .icon_text {
+        font-size: 26px;
+    }
+</style>
+
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+    <div style="height: 100%">
+        <div class="row justify-content-between pt-2">
+            <div class="col-12 col-md-7" style="text-align:justify">
+                <h3 class="title_md pt-2 pb-2">{% translate "Corpus Carolina" %}</h3>
+                <p style="width: 100%;">{% translate "Carolina é um corpus com um volume robusto de textos em Português Brasileiro contemporâneo (1970-2021), com informações de procedência e tipologia. O corpus está disponível em acesso aberto, para download gratuito, desde 8 de março de 2022." %}
+                {% translate "A versão atual, " %}<b style="color:#41afbe">Ada 1.2</b> {% translate "(8 de março de 2022), tem " %}<b style="color:#41afbe">{% translate "823 milhões de tokens" %}</b>, 
+                {% translate "mais de " %}<b style="color:#41afbe">{% translate "dois milhões de textos " %}</b>{% translate "e mais de" %}<b style="color:#41afbe"> 11 GBs</b>.
+                </p>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="text-center" style="max-width: 300px;">
+                    <a class="easy-access-icon" href="{% url 'filter' corpus_version='1_2_Ada' %}">
+                        <i class="icon bi-search"></i>
+                        <p class="icon_text display-6">{% translate "Busque na coleção de textos do Carolina" %}</p>
+                    </a>
+                </div>
+            </div>
+        </div>        
+        <div class="row justify-content-between pt-2">
+            <div class="col-12 col-md-7" style="text-align:justify">
+                <h3 class="title_md pt-0 pb-2">{% translate "Fundamentos" %}</h3>
+                <p style="width: 100%;">
+                    {% translate "O Carolina foi concebido com uma metodologia original que denominamos" %}
+                    <b style="color:#41afbe">{% translate "WaC-wiPT: Web as Corpus com informações de Proveniência e Tipologia." %}</b>
+                    {% translate "Consideramos a proveniência um aspecto crucial a se aspirar em corpora baseados na web, combinada à tipologia e ao gerenciamento de equilíbrio." %} 
+                    {% translate "Além de facilitar o cumprimento dos direitos autorais e a rotulagem tipológica, ela permite responder a perguntas sobre a origem dos textos e aumenta o escopo de uso do corpus." %}
+                </p>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="text-center" style="max-width: 300px;">
+                    <a class="easy-access-icon" href="{% url 'corpus_collection' corpus_version='1_2_Ada' %}">
+                        <i class="icon bi-file-earmark-text"></i>
+                        <p class="icon_text display-6">{% translate "Conheça a origem dos textos da coleção do Carolina" %}</p>
+                    </a>
+                </div>             
+            </div>
+        </div>
+        <div class="row justify-content-between pt-2">
+            <div class="col-12 col-md-7"style="text-align:justify">
+                <h3 class="title_md pt-2 pb-2">{% translate "Projeto Carolina" %}</h3>
+                <p> {% translate "O projeto Carolina faz parte do grande projeto da área de Processamento de Linguagem Natural (NLP2) do " %}
+                    <b style="color:#41afbe">{% translate "Centro de Inteligência Artificial da Universidade de São Paulo (C4AI)" %}</b>.  
+                    {% translate "Ele é desenvolvido por uma equipe multidisciplinar de linguistas e cientistas da computação, membros do C4IA e do " %} 
+                    <b style="color:#41afbe">{% translate "Laboratório Virtual de Humanidades Digitais (LaViHD)" %}</b>. 
+                </p>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="text-center" style="max-width: 300px;">
+                    <a class="easy-access-icon" href="{% url 'about' %}">
+                        <i class="icon bi bi-globe-americas"></i>
+                        <p class="icon_text display-6">{% translate "Conheça mais sobre o projeto Carolina" %}</p>
+                    </a>
+                </div>             
+            </div>
+        </div>
+    </div>
+        <h3 class="title_md pt-4 pb-3">"Carolina"</h3>
+        <div class="row">
+            <div class="col-auto me-5">
+                <img src="{% static 'webpage_static/CarolinaMichaelisdeVasconcelos3.png' %}" style="max-width: 85%;">
+                <p>{% translate "Carolina Michaelis de Vasconcelos em foto de 1876." %}</p>
+            </div>
+            <div class="col" style="text-align:justify">
+                <p>{% translate "O corpus Carolina recebeu esse nome em homenagem a Carolina Michaelis de Vasconcelos (1851-1925), filóloga e linguista alemã radicada em Portugal, autora de <i>A Saudade Portuguesa</i>, e primeira mulher a atuar como docente na Faculdade de Letras da Universidade de Lisboa, em 1911." %}
+                </p><p> {% translate "Essa homenagem simboliza o desejo que move a equipe computacional do Lavihd: caminhar para a ponta do conhecimento valorizando a língua portuguesa e sua história, na trilha de uma ciência feita por mulheres." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

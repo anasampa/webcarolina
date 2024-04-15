@@ -1,0 +1,44 @@
+{% load static %} 
+{% load i18n %}
+
+<footer class="mt-auto foot">
+    <div class="container-fluid">
+        <div class="row px-5 align-items-center">
+                <div class="col d-flex justify-content-center pt-1 pb-1">
+                    <img src="{% static 'central_static/img/img_parceiros/usp_branco_semfundo.png' %}" class="img-fluid" style="max-width: 40%;min-width: 160px">
+                </div>
+                <div class="col d-flex justify-content-center pt-1 pb-1">
+                    <img src="{% static 'central_static/img/img_parceiros/C4AI_branco_semfundo.png' %}" class="img-fluid" style="max-width: 50%;min-width: 200px">
+                </div>
+                <div class="col d-flex justify-content-center pt-1 pb-1">
+                    <img src="{% static 'central_static/img/img_parceiros/logo_fapesp_branco_semfundo.png' %}" class="img-fluid" style="max-width: 50%;min-width: 180px">
+                </div>
+                <div class="col d-flex justify-content-center pt-1 pb-1">
+                    <img src="{% static 'central_static/img/img_parceiros/ibm_branco_semfundo.png' %}" class="img-fluid" style="max-width: 28%;min-width: 160px">
+                </div>
+        </div>
+    </div>
+    <hr class="my-2">
+    <div class="container-fluid text-center pb-2" id="footer" style="min-height: 100px;">
+        <div class="row px-5">
+            <div class="col d-flex">
+                <p class="" style="text-align:justify">
+                    {% translate "Este projeto faz parte da iniciativa de Processamento de Linguagem Natural em Português (NLP2) do Centro de Inteligência Artificial (C4AI) da Universidade de São Paulo, patrocinado pela IBM e FAPESP (Processo 2019 / 07665-4)." %} 
+                    {% translate "O Centro faz parte do Programa de Centros de Pesquisa em Engenharia da FAPESP." %}
+                </p>
+            </div>
+        </div>
+        <div class="row px-5 align-items-center">
+            <div class="col-auto d-flex">
+                <img src="{% static 'central_static/img/img_parceiros/creativecommons.png' %}" class="img-fluid" style="max-width:200px ;">
+            </div>
+            <div class="col d-flex">
+                <p class="" style="text-align:justify">
+                    {% translate "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License." %}<br>
+                    {% translate "O material neste website está disponível para uso sob os termos legais da licença Creative Commons CC BY-NC-ND 4.0." %}<br>
+                    {% translate "Desenvolvimento do website por Ana Carolina Rodrigues." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

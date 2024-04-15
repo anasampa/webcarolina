@@ -1,0 +1,17 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %} 
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-2">{{ text.0.1 }}</h3>
+        <table class="table table-responsive table-sm">
+            {% for feature in text %}
+            <tr><th scope="col">{{ feature.0 }}</th><td style="word-wrap: break-word;min-width: 40vw; max-width: 40vw;">{{ feature.1 }}</td></tr>
+            {% endfor %}
+        </table>     
+    </div>  
+</div>
+{% endblock %}

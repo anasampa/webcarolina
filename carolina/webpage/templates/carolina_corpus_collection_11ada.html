@@ -1,0 +1,582 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %} 
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-2">{% translate "Coleção do Corpus Carolina" %}</h3>
+        <h4 class="title_md pb-2">{% translate "versão" %} 1.0 Ada</h4>
+        {% translate "Os dados de cada corpus, incluindo o endereço eletrônico da licença de origem, remetem às informações fornecidas na origem, não sendo alterados pela equipe do Carolina." %} 
+
+        <div class="card card-body mt-2">
+            <h4 class="title_sm">{% translate "Datasets e outros corpora" %}</h4>
+            <p>
+                <b>214.865.327 palavras</b></br>
+                <b>1.099.072 textos</b>
+            </p>
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#dataeoutros" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            <div class="collapse" id="dataeoutros">
+                <div class="card card-body">
+                    <div class="corpus-summary">
+                        <p class="cell subheader"> Datasets em português </p>
+                        <p class="cell subgrupo"> B2W-Reviews01 </p>
+                        <p class="cell autor"> B2W Digital; Yifei Zhang </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://github.com/b2wdigital/b2w-reviews01 </p>
+                        <p class="cell licença"> CC BY-NC-SA 4.01 </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-nc-sa/4.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Brazilian E-Commerce Public Dataset by Olist </p>
+                        <p class="cell autor"> Olist </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://www.kaggle.com/olistbr/brazilian-ecommerce </p>
+                        <p class="cell licença"> CC BY-NC-SA 4.0 </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-nc-sa/4.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Brazilian Stock Market Tweets with Emotions </p>
+                        <p class="cell autor"> Fernando Vieira da Silva </p>
+                        <p class="cell mantenedor"> Unicamp </p>
+                        <p class="cell corpusurl"> https://www.kaggle.com/fernandojvdasilva/stock-tweets-ptbr-emotions </p>
+                        <p class="cell licença"> GPL 2 </p>
+                        <p class="cell licençaurl"> https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Córpus de Complexidade Textual para Estágios Escolares do Sistema Educacional Brasileiro </p>
+                        <p class="cell autor"> Murilo Gazzola; Sidney Evaldo Leal; Sandra Maria Aluisio </p>
+                        <p class="cell mantenedor"> USP </p>
+                        <p class="cell corpusurl"> https://github.com/gazzola/corpus_readability_nlp_portuguese </p>
+                        <p class="cell licença"> Creative Commons BY 4.0 </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by/4.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Datasets of Neuropsychological Language Tests in Brazilian Portuguese (DNLT-BP) </p>
+                        <p class="cell autor"> Lilian Cristine Hübner </p>
+                        <p class="cell mantenedor"> PUCRS </p>
+                        <p class="cell corpusurl"> https://github.com/nilc-nlp/DNLT-BP/blob/master/README-PT.md </p>
+                        <p class="cell licença"> Attribution-NonCommercial-ShareAlike 4.0 International </p>
+                        <p class="cell licençaurl"> https://github.com/nilc-nlp/DNLT-BP/blob/master/LICENSE.md </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> HAREM </p>
+                        <p class="cell autor"> Linguateca; Diana Santos; Cláudia Freitas; Hugo Gonçalo Oliveira; Paula Carvalho; Cristina Mota </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://www.linguateca.pt/HAREM/ </p>
+                        <p class="cell licença"> Creative Commons 3.0 </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by/3.0/ie/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Leg2Kids </p>
+                        <p class="cell autor"> Nathan Siegle Hartmann </p>
+                        <p class="cell mantenedor"> USP </p>
+                        <p class="cell corpusurl"> http://www.nilc.icmc.usp.br/leg2kids/ </p>
+                        <p class="cell licença"> Creative Commons Attribution 4.0 International License </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by/4.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> News of the Brazilian Newspaper </p>
+                        <p class="cell autor"> Marlesson R. O. de Santana </p>
+                        <p class="cell mantenedor"> UFG </p>
+                        <p class="cell corpusurl"> https://www.kaggle.com/marlesson/news-of-the-site-folhauol </p>
+                        <p class="cell licença"> CC0: Public Domain </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/publicdomain/zero/1.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Portuguese Tweets for Sentiment Analysis </p>
+                        <p class="cell autor"> Augustop </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://www.kaggle.com/augustop/portuguese-tweets-for-sentiment-analysis </p>
+                        <p class="cell licença"> CC BY-NC-SA 4.0 </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-nc-sa/4.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Datasets em português </p>
+                        <p class="cell subgrupo"> Revista Pesquisa FAPESP Parallel Corpora </p>
+                        <p class="cell autor"> Wilker Aziz; Lucia Specia </p>
+                        <p class="cell mantenedor"> USP </p>
+                        <p class="cell corpusurl"> http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm </p>
+                        <p class="cell licença"> Creative Commons 2.0 (Attribution-NonCommercial 2.0) </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-nc/2.0/legalcode </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body  mt-2 ">
+            <a name="Judiciario"></a>
+            <h4 class="title_sm"> {% translate "Judiciário" %}</h4>
+            <p>
+                <b>195.145.400 palavras</b></br>
+                <b> 38.068 textos</b>
+            </p>
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#judiciario" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            <div class="collapse" id="judiciario">
+                <div class="card card-body">
+                    <div class="corpus-summary">
+                        <p class="cell subheader"> STF </p>
+                        <p class="cell subgrupo"> Jurisprudência </p>
+                        <p class="cell autor"> Supremo Tribunal Federal </p>
+                        <p class="cell mantenedor"> Supremo Tribunal Federal </p>
+                        <p class="cell corpusurl"> https://jurisprudencia.stf.jus.br/ </p>
+                        <p class="cell licença"> "LEI Nº 9.610, Art. 8º Não são objeto de proteção como direitos autorais de que trata esta Lei [...] IV - os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais" </p>
+                        <p class="cell licençaurl">
+                        http://www.planalto.gov.br/ccivil_03/Leis/L9610.htm </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> STF </p>
+                        <p class="cell subgrupo"> Portal - Notícias </p>
+                        <p class="cell autor"> Coordenadoria de Imprensa do STF </p>
+                        <p class="cell mantenedor"> Supremo Tribunal Federal </p>
+                        <p class="cell corpusurl"> http://portal.stf.jus.br/listagem/listarNoticias.asp?ori=2 </p>
+                        <p class="cell licença"> "A reprodução das notícias divulgadas no Portal do STF é autorizada mediante menção à fonte 
+                            (STF ou stf.jus.br). [...] Contato: Em caso de dúvida, entre em contato com a Coordenadoria de Imprensa do STF: <a href="javascript:DeCryptX('1j3p1q2t1f3q1t2c2B0s0t3i0.1k2w1t311c0r')">imprensa [at] stf [dot] jus [dot] br</a> – (61) 3217-4480"
+                            </p>
+                        <p class="cell licençaurl"> http://portal.stf.jus.br/textos/verTexto.asp?servico=reproducaoConteudo </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> STF </p>
+                        <p class="cell subgrupo"> Portal STF </p>
+                        <p class="cell autor"> Supremo Tribunal Federal </p>
+                        <p class="cell mantenedor"> Supremo Tribunal Federal </p>
+                        <p class="cell corpusurl"> www.stf.jus.br </p>
+                        <p class="cell licença"> "LEI Nº 9.610, Art. 8º Não são objeto de proteção como direitos autorais de que trata esta Lei [...] IV - os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais" </p>
+                        <p class="cell licençaurl">
+                        http://www.planalto.gov.br/ccivil_03/Leis/L9610.htm </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> STF </p>
+                        <p class="cell subgrupo"> Editais </p>
+                        <p class="cell autor"> Supremo Tribunal Federal </p>
+                        <p class="cell mantenedor"> Supremo Tribunal Federal </p>
+                        <p class="cell corpusurl"> http://www.stf.jus.br/portal/edital/listarEdital.asp?acao=exibirResultado </p>
+                        <p class="cell licença"> "LEI Nº 9.610, Art. 8º Não são objeto de proteção como direitos autorais de que trata esta Lei [...] IV - os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais" </p>
+                        <p class="cell licençaurl">
+                        http://www.planalto.gov.br/ccivil_03/Leis/L9610.htm </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> STF </p>
+                        <p class="cell subgrupo"> Glossário </p>
+                        <p class="cell autor"> Supremo Tribunal Federal </p>
+                        <p class="cell mantenedor"> Supremo Tribunal Federal </p>
+                        <p class="cell corpusurl"> http://www.stf.jus.br/portal/glossario/ </p>
+                        <p class="cell licença"> "LEI Nº 9.610, Art. 8º Não são objeto de proteção como direitos autorais de que trata esta Lei [...] IV - os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais" </p>
+                        <p class="cell licençaurl">
+                        http://www.planalto.gov.br/ccivil_03/Leis/L9610.htm </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> STF </p>
+                        <p class="cell subgrupo"> STF internacional </p>
+                        <p class="cell autor"> Coordenadoria de Imprensa do STF </p>
+                        <p class="cell mantenedor"> Supremo Tribunal Federal </p>
+                        <p class="cell corpusurl"> http://www2.stf.jus.br/portalStfInternacional/cms/destaquesClipping.php?sigla=portalStfDestaque_pt_br&paginaatual= </p>
+                        <p class="cell licença"> "A reprodução das notícias divulgadas no Portal do STF é autorizada mediante menção à fonte (STF ou stf.jus.br). [...] Contato: Em caso de dúvida, entre em contato com a Coordenadoria de Imprensa do STF: <a href="javascript:DeCryptX('0i0m3s0r1f0n3v0a2B0s0t3i310j3x1t200b0r')">imprensa [at] stf [dot] jus [dot] br</a> – (61) 3217-4480"
+                            </p>
+                        <p class="cell licençaurl"> http://portal.stf.jus.br/textos/verTexto.asp?servico=reproducaoConteudo </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body mt-2">
+            <a name="Legislativo"></a>
+            <h4 class="title_sm"> {% translate "Legislativo" %} </h4>
+            <p><b>3.097.274 palavras</b></br>
+            <b>14 textos</b></p>
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#legislativo" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            <div class="collapse" id="legislativo">
+                <div class="card card-body">
+                    <div class="corpus-summary">
+                        <p class="cell subheader"> Senado Federal </p>
+                        <p class="cell subgrupo"> Anais da Constituinte </p>
+                        <p class="cell autor"> Senado Federal </p>
+                        <p class="cell mantenedor"> Senado Federal </p>
+                        <p class="cell corpusurl"> http://www.senado.leg.br/publicacoes/anais/asp/CT_Abertura.asp </p>
+                        <p class="cell licença"> "LEI Nº 9.610, Art. 8º Não são objeto de proteção como direitos autorais de que trata esta Lei [...] IV - os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais" </p>
+                        <p class="cell licençaurl">
+                        http://www.planalto.gov.br/ccivil_03/Leis/L9610.htm </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body mt-2 "> 
+            <a name="Dominio"></a>
+            <h4 class="title_sm">{% translate "Obras em domínio público" %}</h4>
+            <p><b>592.288 palavras</b></br>
+            <b>26 textos</b></p>
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#dompublico" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            <div class="collapse" id="dompublico">
+                <div class="card card-body">
+                    <div class="corpus-summary">
+                        <p class="cell subheader"> Portal domínio público </p>
+                        <p class="cell subgrupo"> 6 rocks matutos & 1 romance rasgado/ Sambarrancho do Bar Jangadeiro </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000186.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença 2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> 7 Canções (poesia) </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000019.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença 2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> A epifania em Clarice Lispector </p>
+                        <p class="cell autor"> Achilles Cleto Cabral da Luz </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000634.pdf </p>
+                        <p class="cell licença"> CC BY 2.5 BR </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> A história de Seny - A caminhada </p>
+                        <p class="cell autor"> Sylvia Senny </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000520.pdf </p>
+                        <p class="cell licença"> CC BY 2.5 BR </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> A teia do contar na Nhecolândia - a personagem lendária Mãozão </p>
+                        <p class="cell autor"> Áurea Rita de Ávila Lima Ferreira </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/gd000001.pdf </p>
+                        <p class="cell licença"> Autorizado para dominio público </p>
+                        <p class="cell licençaurl"> http://www.dominiopublico.gov.br/download/texto/gd000001.pdf </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Acordar e despertar: pequenos toques para acordar ao lado da felicidade </p>
+                        <p class="cell autor"> Priscila Lima Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000172.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença 2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Amanda e os Nanorobôs </p>
+                        <p class="cell autor"> Eliú Quintiliano </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000538.pdf </p>
+                        <p class="cell licença"> CC BY-NC 2.5 BR </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-nc/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Amaricanto </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000006.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Apaixonada por Beethoven (contos) </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000177.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> As Fábulas de Esopo </p>
+                        <p class="cell autor"> Joseph Shafan </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000378.pdf </p>
+                        <p class="cell licença"> GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation </p>
+                        <p class="cell licençaurl"> http://www.dominiopublico.gov.br/download/texto/ea000378.pdf </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Bombeiro Civil no Brasil </p>
+                        <p class="cell autor"> Aparecido Cruz </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000659.pdf </p>
+                        <p class="cell licença"> CC BY-NC 3.0 BR </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-nc/3.0/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Cervantes, Dom Quixote e outras e-crônicas do nosso tempo </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000179.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Construção da figura religiosa no romance de cavalaria </p>
+                        <p class="cell autor"> Marcia Maria de Medeiros </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/gd000022.pdf </p>
+                        <p class="cell licença"> Autorizado para dominio público </p>
+                        <p class="cell licençaurl"> http://www.dominiopublico.gov.br/download/texto/gd000022.pdf </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Erótica </p>
+                        <p class="cell autor"> Alberte Momán </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000403.pdf </p>
+                        <p class="cell licença"> CC BY-NC-SA </p>
+                        <p class="cell licençaurl"> http://www.dominiopublico.gov.br/download/texto/ea000403.pdf </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Erros em tradução do francês para o português: do plano lingüístico ao plano discursivo </p>
+                        <p class="cell autor"> Angela Maria da Silva Corrêa </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000780.pdf </p>
+                        <p class="cell licença"> CC BY 3.0 </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by/3.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Gardenia </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000180.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Ilha. Retratos encontrados num álbum esquecido... </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000181.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Letras livres: disseminando cultura! </p>
+                        <p class="cell autor"> Pedro Anízio Gomes </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000155.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Uso Não-Comercial-Compartilhamento pela mesma licença 2.5 Brasil </p>
+                        <p class="cell licençaurl"> http://www.dominiopublico.gov.br/download/texto/ea000155.pdf </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> O empresário </p>
+                        <p class="cell autor"> Rilvan Batista de Santana </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000429.pdf </p>
+                        <p class="cell licença"> Creative Commons Public Domain </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/license/publicdomain-3?hash=1486815349&title=O+Empres%C3%A1rio&copyright_holder=Rilvan+Batista+de+Santana&email=rilvansantana2005 [at] yahoo [dot] com [dot] br&license_code=publicdomain </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> O pacto maldito e outras histórias de morte </p>
+                        <p class="cell autor"> José Cláudio da Silva </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000418.pdf </p>
+                        <p class="cell licença"> Creative Commons Public Domain </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/publicdomain/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Origem e características da literatura de cordel </p>
+                        <p class="cell autor"> Angela Maciel Nogueira </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea00709a.pdf </p>
+                        <p class="cell licença"> CC0 1.0 </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/publicdomain/zero/1.0/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Pai, posso dar um soco nele? </p>
+                        <p class="cell autor"> José Cláudio da Silva </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000419.pdf </p>
+                        <p class="cell licença"> Creative Commons Public Domain </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/publicdomain/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Quatro Quartetos da Amada Cidade de São Luis </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000175.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Rosas com espinhos (contos) </p>
+                        <p class="cell autor"> Rilvan Batista de Santana </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000653.pdf </p>
+                        <p class="cell licença"> CC BY 3.0 BR </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by/3.0/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Senhora em cordel </p>
+                        <p class="cell autor"> Isabel Lima </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000382.pdf </p>
+                        <p class="cell licença"> CC BY 2.5 BR </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by/2.5/br/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Portal domínio público </p>
+                        <p class="cell subgrupo"> Sentimental demais </p>
+                        <p class="cell autor"> Salomão Rovedo </p>
+                        <p class="cell mantenedor"> Governo Federal do Brasil </p>
+                        <p class="cell corpusurl"> http://www.dominiopublico.gov.br/download/texto/ea000187.pdf </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma licença2.5 Brazil </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/2.5/br/ </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body mt-2 ">
+            <a name="Redes"></a>
+            <h4 class="title_sm">{% translate "Redes sociais" %}</h4>
+            <p><b>1.329.413 palavras</b></br>
+            <b>3.494 textos</b></p>
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#redessociais" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            <div class="collapse" id="redessociais">
+                <div class="card card-body">
+                    <div class="corpus-summary">
+                        <p class="cell subheader"> Wattpad </p>
+                        <p class="cell subgrupo"> Wattpad - Domínio público </p>
+                        <p class="cell autor"> Variável (cf. metadados) </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://www.wattpad.com/ </p>
+                        <p class="cell licença"> Public domain </p>
+                        <p class="cell licençaurl"> Variável (cf. metadados) </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body mt-2 ">
+            <a name="Wikis"></a>
+            <h4 class="title_sm">Wikis</h4>
+            <p>
+            <b>237.206.192 palavras</b></br>
+            <b>603.970 textos</b></p>
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#wiki" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            <div class="collapse" id="wiki">
+                <div class="card card-body">    
+                    <div class="corpus-summary">
+                        <p class="cell subheader"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikcionário </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wiktionary.org/wiki/Wikcion%C3%A1rio:P%C3%A1gina_principal </p>
+                        <p class="cell licença"> Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikilivros </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikibooks.org/wiki/ </p>
+                        <p class="cell licença"> Creative Commons Atribuição-Compartilhamento pela mesma Licença 3.0 Unported </p>
+                        <p class="cell licençaurl"> http://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikimedia </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://br.wikimedia.org/wiki/P%C3%A1gina_principal </p>
+                        <p class="cell licença"> Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0) </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikinotícias </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikinews.org/wiki/P%C3%A1gina_principal </p>
+                        <p class="cell licença"> Creative Commons Attribution 2.5 </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by/2.5/ </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikipédia </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikipedia.org/wiki/ </p>
+                        <p class="cell licença"> Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikiquote </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikiquote.org/wiki/P%C3%A1gina_principal </p>
+                        <p class="cell licença"> Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikisource </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikisource.org/wiki/Wikisource:Sobre </p>
+                        <p class="cell licença"> Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikiversidade </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikiversity.org/wiki/P%C3%A1gina_principal </p>
+                        <p class="cell licença"> Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div><hr class="my-2 mx-3"/>
+                    <div class="corpus-summary">
+                        <p class="cell repeat"> Wikipédia </p>
+                        <p class="cell subgrupo"> Wikivoyage </p>
+                        <p class="cell autor"> Wikimedia Foundation </p>
+                        <p class="cell mantenedor"> - </p>
+                        <p class="cell corpusurl"> https://pt.wikivoyage.org/wiki/P%C3%A1gina_principal </p>
+                        <p class="cell licença"> Atribuição-CompartilhaIgual 3.0 Não Adaptada (CC BY-SA 3.0) da Creative Commons </p>
+                        <p class="cell licençaurl"> https://creativecommons.org/licenses/by-sa/3.0/deed.pt </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

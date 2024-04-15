@@ -1,0 +1,108 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-2">{% translate "Documentação" %}</h3>      
+        <p class="text-justify">
+            {% translate "O Carolina está integralmente disponível para download gratuido. A versão atual é oferecida sem programas de suporte, que estão planejados para lançamentos futuros. " %} 
+            {% translate "Ao fazer o download do corpus, você concorda com os " %}<b>{% translate "Termos de uso" %}</b>.
+        </p>
+        <h4 class="title_sm text-left pt-4 pb-1">{% translate "Termos de uso" %}</h4>
+        <p class="text-justify">
+            {% translate "O Carolina é composto por textos reunidos em diversos repositórios digitais, cujas licenças são múltiplas e, portanto, devem ser estritamente observadas ao fazer uso do corpus." %}
+            {% translate "As licenças específicas de cada documento incluído no Corpus estão detalhadas em seus metadados." %} 
+            {% translate "Há desde licenças amplas de domínio público até licenças de compartilhamento parcial com restrições quanto ao uso comercial." %} 
+            {% translate "Nenhum documento sem licença de compartilhamento foi incluído no Corpus." %}
+        </p>
+        <div class="row">
+            <div class="col-auto">
+                <img src="{% static 'central_static/img/img_parceiros/creativecommons.png' %}" class="img-fluid" style="max-width:180px ;"> 
+                </div>
+            <div class="col text-justify">
+                <p class="text-justify">            
+                    {% translate "O cabeçalho do Corpus está sob a licença de compartilhamento " %}  
+                    <b>{% translate "Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)" %}</b>, 
+                    {% translate "detalhada em" %}
+                    <a class="links" href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank"> 
+                        https://creativecommons.org/licenses/by-nc-sa/4.0
+                    </a>.
+                </p>
+            </div>
+        </div>
+        <h4 class="title_sm text-left pt-4 pb-1">{% translate "Créditos" %}</h4>
+        <p class="text-justify">"O Carolina foi construído por uma equipe de linguistas e cientistas da computação, membros do Laboratório Virtual de Humanidades Digitais – LaViHD e do Centro de Inteligência Artificial da Universidade de São Paulo – C4AI. "
+        </p>
+        <h5><b>{% translate "Como citar a versão atual do Carolina" %}:</b></h5>
+        <p>
+            Crespo, Maria Clara Ramos Morales; Rocha, Maria Lina de Souza Jeannine; Sturzeneker, Mariana Lourenço; 
+            Serras, Felipe Ribas; Mello, Guilherme Lamartine de; Costa, Aline Silva; Palma, Mayara Feliciano; 
+            Mesquita, Renata Morais; Guets, Raquel de Paula; Silva, Mariana Marques da; Finger, Marcelo; Paixão de Sousa, Maria Clara; 
+            Namiuti, Cristiane; Monte, Vanessa Martins do. 2023. 
+            Carolina: a General Corpus of Contemporary Brazilian Portuguese with Provenance, Typology and Versioning Information. 
+            arXiv preprint arXiv:2303.16098. 
+            Disponível em: https://arxiv.org/abs/2303.16098.
+        </p>
+        <h4 class="title_sm text-left pt-4 pb-2">{% translate "Procedência" %}</h4>
+        <p class="text-justify">
+            {% translate "Todos os documentos que fazem parte do Corpus estão anotados com cabeçalhos detalhados, que incluem as informações completas de procedência, autoria e licenças de compartilhamento." %} 
+        </p>       
+        <h4 class="title_sm text-left pt-4 pb-2">{% translate "Estrutura" %} {% translate "(tags e <i>schema</i>)" %}</h4>
+        <p class="text-justify">
+            {% translate "A estrutura dos dados no Carolina segue as diretrizes do protocolo " %}<a class="links" href="https://tei-c.org/" target="_blank">TEI (Text Encoding Initiative)</a>, 
+            {% translate "que define um esquema especifico de XML." %} 
+            {% translate "Especificamente para o Carolina, foram desenvolvidas tags para atender a metodologia WaC-wiPT." %}
+        </p>
+        <h4 class="title_sm text-left pt-4 pb-3">{% translate "Versão atual" %} 1.2 Ada</h4>
+        <p>
+            {% translate "Versão atual" %}: 1.2 Ada</br>
+            {% translate "Data de lançamento" %}: {% translate "8 de março de 2022" %} </br>
+            {% translate "Tamanho" %}: ~ 11GB </br>
+
+            <a href="https://huggingface.co/datasets/carolina-c4ai/corpus-carolina/tree/main" class="links" target="_blank">
+            Download - HuggingFace | 08.03.2023</a>
+        </p>
+        <p>{% translate "Acesse a busca interativa, procedência e <i>schema</i> da versão 1.2 Ada para ver metadados, origem dos textos e estrutura do dados respectivamente" %}:</p>
+        <a href="{% url 'filter' corpus_version='1_2_Ada' %}" class="btn btn-lg active mt-2" role="button" style="background-color:  #419dbe; color: aliceblue;" 
+        aria-pressed="true">{% translate "Busca" %} 1.2 Ada</a> 
+        <a href="{% url 'corpus_collection' corpus_version='1_2_Ada' %}" class="btn btn-lg active mt-2" role="button" style="background-color:  #419dbe; color: aliceblue;" 
+        aria-pressed="true">{% translate "Procedência" %} 1.2 Ada</a>
+        <a href="{% url 'schema' corpus_version='1_2_Ada' %}" class="btn btn-lg active mt-2" role="button" style="background-color:  #419dbe; color: aliceblue;" 
+        aria-pressed="true">{% translate "Tags e <i>Schema</i>" %} 1.2 Ada</a>
+        <h4 class="title_sm text-left pt-4 pb-3">{% translate "Versões anteriores" %}</h4>
+        <h5>1.1 Ada - 08/04/2022</h5> 
+        <ul>                    
+            <li><a href="{% url 'corpus_collection' corpus_version='1_1_Ada' %}" class="links">{% translate "Procedência dos textos" %}</a></li>
+            <li>
+                <a class="popup" data-bs-toggle="modal" data-bs-target="#warning" style="color: #419dbe; text-decoration:none; cursor: pointer">Download - HuggingFace | 08.04.2022</a>
+        </ul>
+        <h5>1.0 Ada</h5>
+        <ul>
+            <li><a href="{% url 'schema' corpus_version='1_0_Ada' %}" class="links"><i>Schema</i></a></li>
+            <li><a class="links" href="{% url 'doc_download' doc_folder='corpus_docs' doc_file='tei_carolina_schema_1_0_from_docx.pdf' %}" download>{% translate "Exemplo de cabeçalho" %}</a></li>
+            <li><a class="links" href="{% url 'doc_download' doc_folder='corpus_docs' doc_file='tei_carolina_schema_1_0_from_docx.pdf' %}" download>{% translate "Customização TEI" %} (download pdf)</a></li>
+        </ul>      
+        <!--confirmation box-->
+        <div class="modal fade" id="warning" tabindex="-1" aria-labelledby="ModalBibLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Aviso: Versão desatualizada</h1>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">x</button>
+                    </div>
+                    <div class="modal-body pt-4 pb-4">
+                        <p>{% translate "Você selecionou o caminho para o download de uma versão antiga do Carolina. Deseja prosseguir?" %}</p>
+                        <div class="btn button-filter"><a href="https://huggingface.co/datasets/carolina-c4ai/corpus-carolina/tree/v1.1" class="" style="text-decoration: none; color:white" target="_blank">
+                            {% translate "Prosseguir" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>>
+{% endblock %}

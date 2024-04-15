@@ -1,0 +1,74 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-3">{% translate "Equipe" %}</h3>
+        <div class="row">
+            <div class="col">            
+                <h5 class="pb-2 pt-3">{% translate "Professores doutores" %}</h5>
+                {% for member in members_prof %}
+                <p  style="padding: 0;  margin: 0 0 0;">
+                    {{ member.nome }}, {{ member.filiacao }}
+                    {% if member.lattes %}
+                    <a title="lattes" class="lattes-link ps-2" target="_blank" href="{{ member.lattes }}">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </a>
+                    {% endif %}
+                </p>
+                {% endfor %}
+                </br>
+                <h5 class="pb-2 pt-3">{% translate "Doutorandos" %}</h5>
+                {% for member in members_doctor %}
+                <p  style="padding: 0;  margin: 0 0 0;">
+                    {{ member.nome }}, {{ member.filiacao }}
+                    {% if member.lattes %}
+                    <a title="lattes" class="lattes-link ps-2" target="_blank" href="{{ member.lattes }}">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </a>
+                    {% endif %}
+                </p>
+                {% endfor %}
+                </br>
+                <h5 class="pb-2 pt-3">{% translate "Mestrandos" %}</h5>
+                {% for member in members_master %}
+                <p  style="padding: 0;  margin: 0 0 0;">
+                    {{ member.nome }}, {{ member.filiacao }}
+                    {% if member.lattes %}
+                    <a title="lattes" class="lattes-link ps-2" target="_blank" href="{{ member.lattes }}">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </a>
+                    {% endif %}
+                </p>
+                {% endfor %}
+                </br>
+                <h5 class="pb-2 pt-3">{% translate "Graduandas e graduadas" %}</h5>
+                {% for member in members_undergrad %}
+                <p  style="padding: 0;  margin: 0 0 0;">
+                    {{ member.nome }}, {{ member.filiacao }}
+                    {% if member.lattes %}
+                    <a title="lattes" class="lattes-link ps-2" target="_blank" href="{{ member.lattes }}">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </a>
+                    {% endif %}
+                </p>
+                {% endfor %}
+                </br>
+            </div>
+            <div class="col px-0">              
+                {% for member in members_all %}
+                {% if member.foto %}
+                <div class="photo-team-wrap">
+                    <p class="photo-team-name">{{ member.nome }}</p>
+                    <img src='{{ member.foto.url }}' class="photo-team">
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

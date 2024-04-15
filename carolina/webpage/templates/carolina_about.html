@@ -1,0 +1,49 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %} 
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-3">{% translate "Contexto" %}</h3>
+        <div class="row ">
+            <div class="col">
+                <p class="" style="text-align:justify">
+                    {% translate "O Carolina é desenvolvido por uma equipe multidisciplinar de linguistas e cientistas da computação, membros do Laboratório Virtual de Humanidades Digitais - LaViHD e do Centro de Inteligência Artificial da Universidade de São Paulo - C4AI. " %}
+                    {% translate "O C4AI-USP tem a missão de produzir pesquisa avançada em Inteligência Artificial no Brasil." %}
+                </p><p class="" style="text-align:justify">
+                    {% translate "O Projeto de Processamento de Linguagem Natural - NLP2 é um dos desafios do C4AI, e tem como objetivo geral desenvolver sistemas que avancem o estado da arte do Processamento de Linguagem Natural para o português brasileiro, atingindo um novo patamar em qualidade de geração e desempenho em relação ao que existe hoje." %}
+                </p><p class="" style="text-align:justify">
+                    {% translate "O NLP2 do C4AI-USP está atualmente construindo vários corpora, entre eles o Carolina, o CORAA, Corpus de Áudios Anotados de Português Falado e o Portinari, Corpus Anotado do Português." %}
+                </p><p class="" style="text-align:justify">
+                    {% translate "O Carolina será um corpus do português contemporâneo para amplo uso, inclusive servindo como uma “nave-mãe” com relação aos demais corpora produzidos no C4AI-USP (englobando as transcrições de áudio do CORAA, os textos brutos não rotulados do Portinari e outros corpora futuros)." %}
+                    {% translate "Leia mais sobre o desafio NPL2 na " %}
+                    <a href='https://sites.google.com/icmc.usp.br/nlp2' class='links' target='_blank'>{% translate "página do Projeto no C4AI." %}</a>
+                </p>
+            
+            </div>
+        </div>
+        <h3 class="title_md text-left pt-4 pb-3">{% translate "Fundamentos" %}</h3>
+
+        <div class="row justify-content-between">
+            <div class="col">
+                <div style="min-width: 130px">
+                <p class="" style="text-align:justify">
+                    {% translate "O Corpus Carolina é concebido com uma metodologia original que denominamos WaC-wiPT: Web as Corpus com informações de Proveniência e Tipologia. Consideramos a proveniência um aspecto crucial a se aspirar em corpora baseados na web, combinada à tipologia e ao gerenciamento de equilíbrio. Além de facilitar o cumprimento dos direitos autorais e a rotulagem tipológica, ela permite responder a perguntas sobre a origem dos textos e aumenta o escopo de uso do corpus." %}
+                </p><p class="" style="text-align:justify">    
+                    {% translate "O trabalho inicial da equipe do Carolina buscou abordar a tipologia textual em um sentido amplo, livre de um compromisso teórico estrito, como uma ferramenta metodológica crucial no desenvolvimento de um acervo de textos de tamanho tão significativo - permitindo a organização das buscas, da seleção e do balanceamento dos textos." %}
+                </p><p class="" style="text-align:justify">
+                    {% translate "A versão atual do corpus, com cerca de 830 milhões de tokens e 2 milhões de textos, inclui material do âmbito judiciário e legislativo brasileiros, obras literárias em domínio público, textos jornalísticos, textos de redes sociais e wikis, e textos já publicados em outros corpora." %}
+                </p><p class="" style="text-align:justify">
+                    {% translate "A v1 Ada (1.0, 1.1 ou 1.2) ainda não representa um universo balanceado quanto à procedência dos textos e sua tipologia ampla. como mostram os dados no gráfico ao lado, relativo à versão 1.2. Observe-se que a v1 corresponde a apenas uma parte dos documentos já prospectados e ainda em tratamento pela equipe." %}
+                </p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="{% static 'webpage_static/corpus_infos/stats_carolina.png' %}" style="max-width:530px; width:auto;height:auto;">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

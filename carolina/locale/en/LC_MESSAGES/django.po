@@ -1,0 +1,1052 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-10 11:28-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\carolina\settings.py:143
+msgid "Brazilian Portuguese"
+msgstr ""
+
+#: .\carolina\settings.py:144
+msgid "English"
+msgstr ""
+
+#: .\templates\admin\base.html:59
+msgid "Olá,"
+msgstr ""
+
+#: .\templates\admin\base.html:64
+msgid "Voltar para o site"
+msgstr ""
+
+#: .\templates\admin\base.html:69
+msgid "Documentation"
+msgstr ""
+
+#: .\templates\admin\base.html:73
+msgid "Alterar senha"
+msgstr ""
+
+#: .\templates\admin\base.html:75
+msgid "Log out"
+msgstr ""
+
+#: .\templates\admin\base.html:85 .\templates\admin\change_form.html:18
+#: .\templates\admin\change_list.html:31
+#: .\templates\admin\change_list_old.html:31
+#: .\templates\admin\delete_confirmation.html:14
+#: .\templates\admin\delete_selected_confirmation.html:14
+msgid "Home"
+msgstr ""
+
+#: .\templates\admin\base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: .\templates\admin\base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: .\templates\admin\change_form.html:21
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: .\templates\admin\change_form.html:43 .\templates\admin\change_list.html:51
+#: .\templates\admin\change_list_old.html:51
+msgid "Please correct the error below."
+msgstr ""
+
+#: .\templates\admin\change_form.html:43 .\templates\admin\change_list.html:51
+#: .\templates\admin\change_list_old.html:51
+msgid "Please correct the errors below."
+msgstr ""
+
+#: .\templates\admin\change_form_object_tools.html:5
+msgid "Histórico"
+msgstr ""
+
+#: .\templates\admin\change_form_object_tools.html:7
+msgid "View on site"
+msgstr ""
+
+#: .\templates\admin\change_list.html:76
+#: .\templates\admin\change_list_old.html:76
+msgid "Filter"
+msgstr ""
+
+#: .\templates\admin\change_list.html:78
+#: .\templates\admin\change_list_old.html:78
+msgid "Clear all filters"
+msgstr ""
+
+#: .\templates\admin\change_list_object_tools.html:8
+#, python-format
+msgid "Adicionar %(name)s"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:18
+msgid "Delete"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:24
+#, python-format
+msgid ""
+"Apagar %(object_name)s '%(escaped_object)s' resulta em apagar objetos "
+"relacionados, porém sua conta não tem permissão para apagar os seguintes "
+"tipos de objetos:"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:31
+#, python-format
+msgid ""
+"Apagar %(object_name)s '%(escaped_object)s' requer apagar os seguintes "
+"objetos relacionados protegidos:"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:38
+#, python-format
+msgid ""
+"Você confirma que deseja apagar %(object_name)s \"%(escaped_object)s\"? "
+"Todos os itens relacionados subsequentes serão apagados:"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:40
+#: .\templates\admin\delete_selected_confirmation.html:39
+msgid "Objects"
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:47
+msgid "Sim, tenho certeza."
+msgstr ""
+
+#: .\templates\admin\delete_confirmation.html:48
+msgid "Não, retorne à página anterior"
+msgstr ""
+
+#: .\templates\admin\delete_selected_confirmation.html:17
+msgid "Delete multiple objects"
+msgstr ""
+
+#: .\templates\admin\delete_selected_confirmation.html:23
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: .\templates\admin\delete_selected_confirmation.html:30
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: .\templates\admin\delete_selected_confirmation.html:37
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: .\templates\admin\delete_selected_confirmation.html:50
+msgid "Yes, I’m sure"
+msgstr ""
+
+#: .\templates\admin\delete_selected_confirmation.html:51
+msgid "No, take me back"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:4
+msgid "Salvar"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:7
+msgid "Apagar"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:9
+msgid "Salvar como novo"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:10
+msgid "Salvar e adicionar outro"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:11
+msgid "Salvar e continuar editando"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:11
+msgid "Save and view"
+msgstr ""
+
+#: .\templates\admin\submit_line.html:12
+msgid "Close"
+msgstr ""
+
+#: .\templates\central\carolina_option11.html:244
+msgid "Corpus Geral do Português Brasileiro Contemporâneo"
+msgstr "General Corpus of Contemporary Brazilian Portuguese"
+
+#: .\templates\central\partials\carolina_footer.html:30
+msgid ""
+"Este projeto faz parte da iniciativa de Processamento de Linguagem Natural "
+"em Português (NLP2) do Centro de Inteligência Artificial (C4AI) da "
+"Universidade de São Paulo, patrocinado pela IBM e FAPESP (Processo 2019 / "
+"07665-4)."
+msgstr ""
+"This project is part of the Natural Language Processing in Portuguese (NLP2) "
+"initiative of the Center for Artificial Intelligence (C4AI) at the "
+"University of São Paulo, sponsored by IBM and FAPESP (Process 2019 / "
+"07665-4)."
+
+#: .\templates\central\partials\carolina_footer.html:31
+msgid ""
+"O Centro faz parte do Programa de Centros de Pesquisa em Engenharia da "
+"FAPESP."
+msgstr "The Center is part of the FAPESP Engineering Research Centers Program."
+
+#: .\templates\central\partials\carolina_footer.html:41
+msgid ""
+"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International "
+"License."
+msgstr ""
+
+#: .\templates\central\partials\carolina_footer.html:42
+msgid ""
+"O material neste website está disponível para uso sob os termos legais da "
+"licença Creative Commons CC BY-NC-ND 4.0."
+msgstr ""
+"The material on this website is available for use under the legal terms of "
+"Creative Commons license CC BY-NC-ND 4.0."
+
+#: .\templates\central\partials\carolina_footer.html:43
+msgid "Desenvolvimento do website por Ana Carolina Rodrigues."
+msgstr "Website development by Ana Carolina Rodrigues."
+
+#: .\templates\central\partials\carolina_header.html:37
+msgid "Início"
+msgstr "Home"
+
+#: .\templates\central\partials\carolina_header.html:38
+msgid "Sobre"
+msgstr "About"
+
+#: .\templates\central\partials\carolina_header.html:40
+#: .\webpage\templates\carolina_filter.html:26
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:25
+msgid "Filtros"
+msgstr "Filters"
+
+#: .\templates\central\partials\carolina_header.html:41
+#: .\webpage\templates\carolina_team.html:11
+msgid "Equipe"
+msgstr "Team"
+
+#: .\templates\central\partials\carolina_header.html:42
+#: .\webpage\templates\carolina_publications.html:11
+msgid "Publicações"
+msgstr "Publications"
+
+#: .\webpage\templates\carolina_about.html:10
+msgid "Contexto"
+msgstr "Context"
+
+#: .\webpage\templates\carolina_about.html:14
+msgid ""
+"O Carolina é desenvolvido por uma equipe multidisciplinar de linguistas e "
+"cientistas da computação, membros do Laboratório Virtual de Humanidades "
+"Digitais - LaViHD e do Centro de Inteligência Artificial da Universidade de "
+"São Paulo - C4AI. "
+msgstr ""
+"Carolina is developed by a multidisciplinary team of linguists and computer "
+"scientists, members of the Virtual Digital Humanities Laboratory - LaViHD "
+"and the Artificial Intelligence Center of the University of São Paulo - "
+"C4AI. "
+
+#: .\webpage\templates\carolina_about.html:15
+msgid ""
+"O C4AI-USP tem a missão de produzir pesquisa avançada em Inteligência "
+"Artificial no Brasil."
+msgstr ""
+"C4AI-USP's mission is to produce advanced research in Artificial "
+"Intelligence in Brazil."
+
+#: .\webpage\templates\carolina_about.html:17
+msgid ""
+"O Projeto de Processamento de Linguagem Natural - NLP2 é um dos desafios do "
+"C4AI, e tem como objetivo geral desenvolver sistemas que avancem o estado da "
+"arte do Processamento de Linguagem Natural para o português brasileiro, "
+"atingindo um novo patamar em qualidade de geração e desempenho em relação ao "
+"que existe hoje."
+msgstr ""
+"The Natural Language Processing Project - NLP2 is one of C4AI's challenges, "
+"and its general objective is to develop systems that advance the state of "
+"the art of Natural Language Processing for Brazilian Portuguese, reaching a "
+"new level in generation quality and performance in compared to what exists "
+"today."
+
+#: .\webpage\templates\carolina_about.html:19
+msgid ""
+"O NLP2 do C4AI-USP está atualmente construindo vários corpora, entre eles o "
+"Carolina, o CORAA, Corpus de Áudios Anotados de Português Falado e o "
+"Portinari, Corpus Anotado do Português."
+msgstr ""
+"C4AI-USP's NLP2 is currently building several corpora, including Carolina, "
+"CORAA, Corpus of Annotated Audios of Spoken Portuguese and Portinari , "
+"Corpus Annotated of Portuguese ."
+
+#: .\webpage\templates\carolina_about.html:21
+msgid ""
+"O Carolina será um corpus do português contemporâneo para amplo uso, "
+"inclusive servindo como uma “nave-mãe” com relação aos demais corpora "
+"produzidos no C4AI-USP (englobando as transcrições de áudio do CORAA, os "
+"textos brutos não rotulados do Portinari e outros corpora futuros)."
+msgstr ""
+"Carolina will be a corpus of contemporary Portuguese for wide use, including "
+"serving as a “mothership” in relation to the other corpora produced at C4AI-"
+"USP  (encompassing the audio transcriptions from CORAA, the unlabeled raw "
+"texts from Portinari and other corpora futures)."
+
+#: .\webpage\templates\carolina_about.html:22
+msgid "Leia mais sobre o desafio NPL2 na "
+msgstr "Read more about the NPL2 challenge on the "
+
+#: .\webpage\templates\carolina_about.html:23
+msgid "página do Projeto no C4AI."
+msgstr "Project page of C4AI."
+
+#: .\webpage\templates\carolina_about.html:28
+#: .\webpage\templates\carolina_home_option11.html:42
+msgid "Fundamentos"
+msgstr "Fundamentals"
+
+#: .\webpage\templates\carolina_about.html:34
+msgid ""
+"O Corpus Carolina é concebido com uma metodologia original que denominamos "
+"WaC-wiPT: Web as Corpus com informações de Proveniência e Tipologia. "
+"Consideramos a proveniência um aspecto crucial a se aspirar em corpora "
+"baseados na web, combinada à tipologia e ao gerenciamento de equilíbrio. "
+"Além de facilitar o cumprimento dos direitos autorais e a rotulagem "
+"tipológica, ela permite responder a perguntas sobre a origem dos textos e "
+"aumenta o escopo de uso do corpus."
+msgstr ""
+" The Carolina Corpus is designed with an original methodology that we call "
+"WaC-wiPT : Web as Corpus with Provenance and Typology information. We "
+"consider provenance to be a crucial aspect to aspire to in web-based "
+"corpora, combined with typology and balance management. In addition to "
+"facilitating copyright compliance and typological labeling, it allows "
+"answering questions about the origin of texts and increases the scope of use "
+"of the corpus."
+
+#: .\webpage\templates\carolina_about.html:36
+msgid ""
+"O trabalho inicial da equipe do Carolina buscou abordar a tipologia textual "
+"em um sentido amplo, livre de um compromisso teórico estrito, como uma "
+"ferramenta metodológica crucial no desenvolvimento de um acervo de textos de "
+"tamanho tão significativo - permitindo a organização das buscas, da seleção "
+"e do balanceamento dos textos."
+msgstr ""
+"The initial work of the Carolina team sought to approach textual typology in "
+"a broad sense, free from a strict theoretical commitment, as a crucial "
+"methodological tool in the development of a collection of texts of such a "
+"significant size - allowing the organization of searches, selection and "
+"balancing texts."
+
+#: .\webpage\templates\carolina_about.html:38
+msgid ""
+"A versão atual do corpus, com cerca de 830 milhões de tokens e 2 milhões de "
+"textos, inclui material do âmbito judiciário e legislativo brasileiros, "
+"obras literárias em domínio público, textos jornalísticos, textos de redes "
+"sociais e wikis, e textos já publicados em outros corpora."
+msgstr ""
+"The current version of the corpus, with around 830 million tokens and 2 "
+"million texts, includes material from the Brazilian judiciary and "
+"legislation, literary works in the public domain, journalistic texts, texts "
+"from social networks and wikis, and texts already published in other corpora."
+
+#: .\webpage\templates\carolina_about.html:40
+msgid ""
+"A v1 Ada (1.0, 1.1 ou 1.2) ainda não representa um universo balanceado "
+"quanto à procedência dos textos e sua tipologia ampla. como mostram os dados "
+"no gráfico ao lado, relativo à versão 1.2. Observe-se que a v1 corresponde a "
+"apenas uma parte dos documentos já prospectados e ainda em tratamento pela "
+"equipe."
+msgstr ""
+"v1 Ada (1.0, 1.1 or 1.2) does not yet represent a balanced universe in terms "
+"of the origin of the texts and their broad typology, as shown by the data in "
+"the graph on the side, relating to version 1.2. Note that v1 corresponds to "
+"only a part of the documents already prospected and still being processed by "
+"the team."
+
+#: .\webpage\templates\carolina_corpus_collection.html:48
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:54
+msgid "Coleção do Corpus Carolina"
+msgstr "Carolina Corpus Collection"
+
+#: .\webpage\templates\carolina_corpus_collection.html:49
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:55
+#: .\webpage\templates\carolina_corpus_schema.html:126
+#: .\webpage\templates\carolina_filter.html:27
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:26
+msgid "versão"
+msgstr "version"
+
+#: .\webpage\templates\carolina_corpus_collection.html:50
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:56
+msgid ""
+"Os dados de cada corpus, incluindo o endereço eletrônico da licença de "
+"origem, remetem às informações fornecidas na origem, não sendo alterados "
+"pela equipe do Carolina."
+msgstr ""
+"The data of each corpus, including the electronic address of the source "
+"license, refers to the information provided by the source, and is not "
+"altered by the Carolina team."
+
+#: .\webpage\templates\carolina_corpus_collection.html:65
+msgid " palavras"
+msgstr " words"
+
+#: .\webpage\templates\carolina_corpus_collection.html:66
+#: .\webpage\views.py:165
+msgid " textos"
+msgstr " texts"
+
+#: .\webpage\templates\carolina_corpus_collection.html:70
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:65
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:170
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:244
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:267
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:514
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:537
+msgid "Ver lista completa"
+msgstr "See full list"
+
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:59
+msgid "Datasets e outros corpora"
+msgstr "Datasets and other corpora"
+
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:164
+msgid "Judiciário"
+msgstr "Judicial branch"
+
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:240
+msgid "Legislativo"
+msgstr "Legislative branch"
+
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:263
+msgid "Obras em domínio público"
+msgstr "Public domain works"
+
+#: .\webpage\templates\carolina_corpus_collection_11ada.html:510
+msgid "Redes sociais"
+msgstr "Social media"
+
+#: .\webpage\templates\carolina_corpus_schema.html:125
+msgid "Estrutura do corpus Carolina"
+msgstr "Carolina corpus structure"
+
+#: .\webpage\templates\carolina_corpus_schema.html:129
+#: .\webpage\templates\carolina_docs.html:72
+msgid "A estrutura dos dados no Carolina segue as diretrizes do protocolo "
+msgstr "The data structure in Carolina follows the guidelines of protocol "
+
+#: .\webpage\templates\carolina_corpus_schema.html:130
+#: .\webpage\templates\carolina_docs.html:73
+msgid "que define um esquema especifico de XML."
+msgstr "which defines a specific XML scheme."
+
+#: .\webpage\templates\carolina_corpus_schema.html:131
+#: .\webpage\templates\carolina_docs.html:74
+msgid ""
+"Especificamente para o Carolina, foram desenvolvidas tags para atender a "
+"metodologia WaC-wiPT."
+msgstr ""
+"Specifically for Carolina, tags were developed to comply with the WaC-wiPT "
+"methodology."
+
+#: .\webpage\templates\carolina_corpus_schema.html:135
+msgid "Tags do Carolina"
+msgstr "Carolina Tags"
+
+#: .\webpage\templates\carolina_corpus_schema.html:136
+msgid "Acesse a lista de tags do Corpus Carolina aqui"
+msgstr "Access the Corpus Carolina tag list here"
+
+#: .\webpage\templates\carolina_corpus_schema.html:139
+msgid "Exemplo do <i>schema</i> do Carolina"
+msgstr "Example of Carolina's <i>schema</i>"
+
+#: .\webpage\templates\carolina_docs.html:11
+msgid "Documentação"
+msgstr "Documentation"
+
+#: .\webpage\templates\carolina_docs.html:14
+#: .\webpage\templates\carolina_filter.html:29
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:28
+msgid ""
+"O Carolina está integralmente disponível para download gratuido. A versão "
+"atual é oferecida sem programas de suporte, que estão planejados para "
+"lançamentos futuros. "
+msgstr ""
+"Carolina is fully available for free download. The current version is "
+"offered without support programs, which are planned for future releases."
+
+#: .\webpage\templates\carolina_docs.html:15
+#: .\webpage\templates\carolina_filter.html:30
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:29
+msgid "Ao fazer o download do corpus, você concorda com os "
+msgstr "By downloading the corpus, you agree to the "
+
+#: .\webpage\templates\carolina_docs.html:15
+#: .\webpage\templates\carolina_docs.html:18
+msgid "Termos de uso"
+msgstr "Terms of use"
+
+#: .\webpage\templates\carolina_docs.html:20
+msgid ""
+"O Carolina é composto por textos reunidos em diversos repositórios digitais, "
+"cujas licenças são múltiplas e, portanto, devem ser estritamente observadas "
+"ao fazer uso do corpus."
+msgstr ""
+"Carolina is composed of texts gathered in several digital repositories, "
+"whose licenses are multiple and, therefore, must be strictly observed when "
+"using the corpus."
+
+#: .\webpage\templates\carolina_docs.html:21
+msgid ""
+"As licenças específicas de cada documento incluído no Corpus estão "
+"detalhadas em seus metadados."
+msgstr ""
+"The specific licenses for each document included in the Corpus are detailed "
+"in its metadata."
+
+#: .\webpage\templates\carolina_docs.html:22
+msgid ""
+"Há desde licenças amplas de domínio público até licenças de compartilhamento "
+"parcial com restrições quanto ao uso comercial."
+msgstr ""
+"There are broad public domain licenses to partial sharing licenses with "
+"restrictions on commercial use."
+
+#: .\webpage\templates\carolina_docs.html:23
+msgid ""
+"Nenhum documento sem licença de compartilhamento foi incluído no Corpus."
+msgstr " No documents without a sharing license were included in the Corpus."
+
+#: .\webpage\templates\carolina_docs.html:31
+msgid "O cabeçalho do Corpus está sob a licença de compartilhamento "
+msgstr "The Corpus header is under the license "
+
+#: .\webpage\templates\carolina_docs.html:32
+msgid ""
+"Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional "
+"(CC BY-NC-SA 4.0)"
+msgstr ""
+"Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC "
+"BY-NC-SA 4.0)"
+
+#: .\webpage\templates\carolina_docs.html:33
+msgid "detalhada em"
+msgstr "detailed at"
+
+#: .\webpage\templates\carolina_docs.html:40
+msgid "Créditos"
+msgstr "Acknowledgments"
+
+#: .\webpage\templates\carolina_docs.html:43
+#: .\webpage\templates\carolina_filter.html:32
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:31
+msgid "Como citar a versão atual do Carolina"
+msgstr "How to cite the current version of Carolina"
+
+#: .\webpage\templates\carolina_docs.html:64
+#: .\webpage\templates\carolina_docs.html:94
+msgid "Procedência"
+msgstr "Source"
+
+#: .\webpage\templates\carolina_docs.html:66
+msgid ""
+"Todos os documentos que fazem parte do Corpus estão anotados com cabeçalhos "
+"detalhados, que incluem as informações completas de procedência, autoria e "
+"licenças de compartilhamento."
+msgstr ""
+"All documents that are part of the Corpus are annotated with detailed "
+"headers, which include complete information on origin, authorship and "
+"sharing licenses."
+
+#: .\webpage\templates\carolina_docs.html:70
+msgid "Estrutura"
+msgstr "Structure"
+
+#: .\webpage\templates\carolina_docs.html:70
+msgid "(tags e <i>schema</i>)"
+msgstr "(tags and <i>schema</i>)"
+
+#: .\webpage\templates\carolina_docs.html:77
+#: .\webpage\templates\carolina_docs.html:79
+msgid "Versão atual"
+msgstr "Latest version"
+
+#: .\webpage\templates\carolina_docs.html:80
+msgid "Data de lançamento"
+msgstr "Date of release"
+
+#: .\webpage\templates\carolina_docs.html:80
+msgid "8 de março de 2022"
+msgstr "March 8, 2022"
+
+#: .\webpage\templates\carolina_docs.html:81
+msgid "Tamanho"
+msgstr "Size"
+
+#: .\webpage\templates\carolina_docs.html:90
+msgid ""
+"Acesse a busca interativa, procedência e <i>schema</i> da versão 1.2 Ada "
+"para ver metadados, origem dos textos e estrutura do dados respectivamente"
+msgstr ""
+"Access the interactive search, provenance and <i>schema</i> of version 1.2 "
+"Ada to see metadata, text origin and data structure respectively"
+
+#: .\webpage\templates\carolina_docs.html:92
+msgid "Busca"
+msgstr "Search"
+
+#: .\webpage\templates\carolina_docs.html:96
+msgid "Tags e <i>Schema</i>"
+msgstr "(Tags and <i>Schema</i>)"
+
+#: .\webpage\templates\carolina_docs.html:98
+msgid "Versões anteriores"
+msgstr "Previous versions"
+
+#: .\webpage\templates\carolina_docs.html:101
+msgid "Procedência dos textos"
+msgstr "Source of texts"
+
+#: .\webpage\templates\carolina_docs.html:113
+msgid "Exemplo de cabeçalho"
+msgstr "Header example"
+
+#: .\webpage\templates\carolina_docs.html:113
+#: .\webpage\templates\carolina_docs.html:114
+msgid "Disponível em breve"
+msgstr "Available soon"
+
+#: .\webpage\templates\carolina_docs.html:114
+msgid "Customização TEI"
+msgstr "TEI Customization"
+
+#: .\webpage\templates\carolina_docs.html:125
+msgid ""
+"Você selecionou o caminho para o download de uma versão antiga do Carolina. "
+"Deseja prosseguir?"
+msgstr ""
+"You have selected the path to download an old version of Carolina. Do you "
+"want to proceed?"
+
+#: .\webpage\templates\carolina_docs.html:127
+msgid "Prosseguir"
+msgstr "Yes, proceed"
+
+#: .\webpage\templates\carolina_filter.html:30
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:29
+msgid "Termos de Uso"
+msgstr "Terms of Use"
+
+#: .\webpage\templates\carolina_filter.html:46
+msgid "Filtro por atributos"
+msgstr "Filter by features"
+
+#: .\webpage\templates\carolina_filter.html:47
+msgid ""
+"Selecione as características desejadas e aperte 'Filtrar' para filtrar os "
+"textos do Corpus Carolina."
+msgstr ""
+"Pick the desired feature and press 'Select' to filter texts from the "
+"Carolina Corpus."
+
+#: .\webpage\templates\carolina_filter.html:54
+#: .\webpage\templates\carolina_filter.html:206
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:48
+msgid "Busca por ID do texto"
+msgstr "Search by text ID"
+
+#: .\webpage\templates\carolina_filter.html:56
+#: .\webpage\templates\carolina_filter.html:208
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:50
+msgid "Digite um ID"
+msgstr "Enter a text ID"
+
+#: .\webpage\templates\carolina_filter.html:59
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:53
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:69
+msgid "Buscar"
+msgstr "Search"
+
+#: .\webpage\templates\carolina_filter.html:69
+msgid "Download de textos selecionados"
+msgstr "Download of the selected texts"
+
+#: .\webpage\templates\carolina_filter.html:74
+msgid "O download pode demorar para iniciar. Permaneça da página."
+msgstr "The download process may take time to start. Do not leave the page."
+
+#: .\webpage\templates\carolina_filter.html:74
+msgid "Deseja continuar?"
+msgstr "Do you want to proceed?"
+
+#: .\webpage\templates\carolina_filter.html:77
+msgid "Sim, fazer download. (basta um click)"
+msgstr "Yes, download. (please do not click more than once)"
+
+#: .\webpage\templates\carolina_filter.html:84
+#: .\webpage\templates\carolina_filter.html:225
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:182
+msgid "Resultados"
+msgstr "Results"
+
+#: .\webpage\templates\carolina_filter.html:86
+msgid "Fazer o download dos arquivos dos textos resultantes da sua busca"
+msgstr "Download the text files resulting from your search"
+
+#: .\webpage\templates\carolina_filter.html:131
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:115
+msgid "sem seleção"
+msgstr "no selection"
+
+#: .\webpage\templates\carolina_filter.html:148
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:132
+msgid "valor mínimo"
+msgstr "minimum"
+
+#: .\webpage\templates\carolina_filter.html:149
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:133
+msgid "valor máximo"
+msgstr "maximum"
+
+#: .\webpage\templates\carolina_filter.html:157
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:141
+msgid "Escreva para filtrar"
+msgstr "Write to filter"
+
+#: .\webpage\templates\carolina_filter.html:172
+#: .\webpage\templates\carolina_filter.html:211
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:90
+msgid "Filtrar"
+msgstr "Select"
+
+#: .\webpage\templates\carolina_filter.html:235
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:192
+msgid "ID do texto"
+msgstr "Text ID"
+
+#: .\webpage\templates\carolina_filter.html:239
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:196
+msgid "Documento"
+msgstr "Document"
+
+#: .\webpage\templates\carolina_filter.html:243
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:200
+msgid "Domínio"
+msgstr "Domain"
+
+#: .\webpage\templates\carolina_filter.html:247
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:204
+msgid "Data de download"
+msgstr "Download date"
+
+#: .\webpage\templates\carolina_filter.html:251
+msgid "Licença no Carolina"
+msgstr "License in Carolina"
+
+#: .\webpage\templates\carolina_home_option11.html:25
+msgid "Corpus Carolina"
+msgstr "Carolina Corpus"
+
+#: .\webpage\templates\carolina_home_option11.html:26
+msgid ""
+"Carolina é um corpus com um volume robusto de textos em Português Brasileiro "
+"contemporâneo (1970-2021), com informações de procedência e tipologia. O "
+"corpus está disponível em acesso aberto, para download gratuito, desde 8 de "
+"março de 2022."
+msgstr ""
+"Carolina is a corpus with a robust volume of texts in contemporary Brazilian "
+"Portuguese (1970-2021), with information on origin and typology. The corpus "
+"has been available in open access, for free download, since March 8, 2022."
+
+#: .\webpage\templates\carolina_home_option11.html:27
+msgid "A versão atual, "
+msgstr "The current version, "
+
+#: .\webpage\templates\carolina_home_option11.html:27
+msgid "(8 de março de 2022), tem "
+msgstr "(March 8, 2022), has "
+
+#: .\webpage\templates\carolina_home_option11.html:27
+msgid "823 milhões de tokens"
+msgstr "823 million tokens"
+
+#: .\webpage\templates\carolina_home_option11.html:28
+msgid "mais de "
+msgstr "more than "
+
+#: .\webpage\templates\carolina_home_option11.html:28
+msgid "dois milhões de textos "
+msgstr "two million texts "
+
+#: .\webpage\templates\carolina_home_option11.html:28
+msgid "e mais de"
+msgstr "and more than"
+
+#: .\webpage\templates\carolina_home_option11.html:35
+msgid "Busque na coleção de textos do Carolina"
+msgstr "Search in Carolina's text collection"
+
+#: .\webpage\templates\carolina_home_option11.html:44
+msgid "O Carolina foi concebido com uma metodologia original que denominamos"
+msgstr ""
+"The Carolina Corpus is designed with an original methodology that we call"
+
+#: .\webpage\templates\carolina_home_option11.html:45
+msgid "WaC-wiPT: Web as Corpus com informações de Proveniência e Tipologia."
+msgstr "WaC-wiPT : Web as Corpus with Provenance and Typology information."
+
+#: .\webpage\templates\carolina_home_option11.html:46
+msgid ""
+"Consideramos a proveniência um aspecto crucial a se aspirar em corpora "
+"baseados na web, combinada à tipologia e ao gerenciamento de equilíbrio."
+msgstr ""
+"We consider provenance to be a crucial aspect to aspire to in web-based "
+"corpora, combined with typology and balance management."
+
+#: .\webpage\templates\carolina_home_option11.html:47
+msgid ""
+"Além de facilitar o cumprimento dos direitos autorais e a rotulagem "
+"tipológica, ela permite responder a perguntas sobre a origem dos textos e "
+"aumenta o escopo de uso do corpus."
+msgstr ""
+"In addition to facilitating copyright compliance and typological labeling, "
+"it allows answering questions about the origin of texts and increases the "
+"scope of use of the corpus."
+
+#: .\webpage\templates\carolina_home_option11.html:54
+msgid "Conheça a origem dos textos da coleção do Carolina"
+msgstr "Get to know the sources of the texts in Carolina’s collection"
+
+#: .\webpage\templates\carolina_home_option11.html:61
+msgid "Projeto Carolina"
+msgstr "Carolina Project"
+
+#: .\webpage\templates\carolina_home_option11.html:62
+msgid ""
+"O projeto Carolina faz parte do grande projeto da área de Processamento de "
+"Linguagem Natural (NLP2) do "
+msgstr ""
+" The Carolina project is part of the big project in the field of Natural "
+"Language Processing (NLP2) of ​​the "
+
+#: .\webpage\templates\carolina_home_option11.html:63
+msgid "Centro de Inteligência Artificial da Universidade de São Paulo (C4AI)"
+msgstr "Artificial Intelligence Center at the University of São Paulo (C4AI)"
+
+#: .\webpage\templates\carolina_home_option11.html:64
+msgid ""
+"Ele é desenvolvido por uma equipe multidisciplinar de linguistas e "
+"cientistas da computação, membros do C4IA e do "
+msgstr ""
+"It is developed by a multidisciplinary team of linguists and computer "
+"scientists, members of C4IA and the "
+
+#: .\webpage\templates\carolina_home_option11.html:65
+msgid "Laboratório Virtual de Humanidades Digitais (LaViHD)"
+msgstr "Virtual Laboratory of Digital Humanities (LaViHD)"
+
+#: .\webpage\templates\carolina_home_option11.html:73
+msgid "Conheça mais sobre o projeto Carolina"
+msgstr "Find out more about the Carolina project"
+
+#: .\webpage\templates\carolina_home_option11.html:85
+msgid "Carolina Michaelis de Vasconcelos em foto de 1876."
+msgstr "Carolina Michaelis in a photo from 1876"
+
+#: .\webpage\templates\carolina_home_option11.html:88
+msgid ""
+"O corpus Carolina recebeu esse nome em homenagem a Carolina Michaelis de "
+"Vasconcelos (1851-1925), filóloga e linguista alemã radicada em Portugal, "
+"autora de <i>A Saudade Portuguesa</i>, e primeira mulher a atuar como "
+"docente na Faculdade de Letras da Universidade de Lisboa, em 1911."
+msgstr ""
+"The Carolina Corpus was named in honor of Carolina Michaelis de Vasconcelos "
+"(1851-1925), a German philologist and linguist based in Portugal, author of "
+"<i>A Saudade Portuguesa</i>, and the first woman to work as a professor at "
+"the Faculty of Arts of the University of Lisbon, in 1911."
+
+#: .\webpage\templates\carolina_home_option11.html:89
+msgid ""
+"Essa homenagem simboliza o desejo que move a equipe computacional do Lavihd: "
+"caminhar para a ponta do conhecimento valorizando a língua portuguesa e sua "
+"história, na trilha de uma ciência feita por mulheres."
+msgstr ""
+"This honor symbolizes the desire that drives the Lavihd computational team: "
+"to move towards the cutting edge of knowledge, valuing the Portuguese "
+"language and its history, on the path of a science carried out by women."
+
+#: .\webpage\templates\carolina_team.html:14
+msgid "Professores doutores"
+msgstr "Professors"
+
+#: .\webpage\templates\carolina_team.html:27
+msgid "Doutorandos"
+msgstr "PhD students"
+
+#: .\webpage\templates\carolina_team.html:40
+msgid "Mestrandos"
+msgstr "Master's students"
+
+#: .\webpage\templates\carolina_team.html:53
+msgid "Graduandas e graduadas"
+msgstr "Undergraduate and graduate students"
+
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:64
+msgid "Busca nos textos"
+msgstr "Search in texts"
+
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:66
+msgid "Digite uma palavra ou expressão"
+msgstr "Enter a word or expression"
+
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:87
+msgid "Características"
+msgstr "Features"
+
+#: .\webpage\templates\old_templates\carolina_corpus_filter_combusca.html:208
+msgid "Licença de origem"
+msgstr "Source license"
+
+#: .\webpage\views.py:155
+msgid "Não foi encontrado texto com ID '"
+msgstr "No text was found with ID '"
+
+#: .\webpage\views.py:160
+msgid "Erro na busca."
+msgstr "Search error."
+
+#: .\webpage\views.py:160
+msgid " Esperado valor inteiro numérico em campo min e max."
+msgstr " Expected numeric integer value in min and max field."
+
+#: .\webpage\views.py:165
+msgid "Sua busca retornou "
+msgstr "Your search returned "
+
+#: .\webpage\views.py:166
+msgid " Segue abaixo uma amostra aleatória com "
+msgstr " Below is a random sample with "
+
+msgid "Olá, eu sou o site."
+msgstr "Hi I am the website."
+
+msgid "Sem resultados para sua busca. A expressão '"
+msgstr "No results for your search. The expression '"
+
+msgid "' não foi encontrada."
+msgstr "' was not found."
+
+msgid "textos"
+msgstr "texts"
+
+msgid "Curadoria"
+msgstr "Curation"
+
+msgid "Texto"
+msgstr "Text"
+
+msgid "Medidas"
+msgstr "Measurements"
+
+msgid "Proveniência"
+msgstr "Provenance"
+
+msgid "Filtros avançados"
+msgstr "Advanced filters"
+
+msgid "Filtros avançados de Proveniência"
+msgstr "Advanced filters of provenance"
+
+msgid "Língua"
+msgstr "Language"
+
+msgid "Grau de preparação"
+msgstr "Degree of preparation"
+
+msgid "Tipologia ampla"
+msgstr "Broad typology"
+
+msgid "Autor"
+msgstr "Author"
+
+msgid "Mantenedor"
+msgstr "Sponsor"
+
+msgid "Tradutor"
+msgstr "Translator"
+
+msgid "Acesso da fonte"
+msgstr "Source access"
+
+msgid "Região da fonte"
+msgstr "Source region"
+
+msgid "Natureza da aquisição"
+msgstr "Nature of acquisition"
+
+msgid "Texto escrito ou transcrito"
+msgstr "Written or transcribed text"
+
+msgid "Integridade"
+msgstr "Integrity"
+
+msgid "Tipologia da fonte"
+msgstr "Source typology"
+
+msgid "Autoridade da fonte"
+msgstr "Source authority"
+
+msgid "Coleção"
+msgstr "Collection"
+
+msgid "Parte"
+msgstr "Part"
+
+msgid "Formato original"
+msgstr "Original format"
+
+msgid "Licença da fonte"
+msgstr "Source license"
+
+msgid "Opções"
+msgstr "Options"
+
+msgid "Portais de universidades"
+msgstr "University domains"
+
+msgid "Wikis"
+msgstr "Wikis"

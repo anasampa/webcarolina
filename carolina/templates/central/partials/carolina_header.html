@@ -1,0 +1,95 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+<script>
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 418 || document.documentElement.scrollTop > 418) {
+    document.getElementById("navbar-total").style.backgroundColor = "#2b2827";
+  } else {
+    document.getElementById("navbar-total").style.backgroundColor = "transparent";
+  }
+}
+</script>
+
+<div class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark px-2" id="navbar-total">
+        <div class="container-fluid">
+            <!--Brand-->
+            <a class="navbar-brand text-center pe-1 mx-0" href="#">
+                <img src="{% static 'central_static/img/logos/carolinatumb_branco_semfundo.png' %}" style="max-width:80%">
+                <div id="sublogo"></div>
+            </a>
+            <!--Toggler/collapse button-->
+            <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu to collapse-->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">{% translate "Início" %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">{% translate "Sobre" %}</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{% url 'docs' %}">Corpus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'filter' corpus_version='1_2_Ada' %}">{% translate "Filtros" %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">{% translate "Equipe" %}</a>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'publications' %}">{% translate "Publicações" %}</a></li>
+                </ul>
+            </div>
+            <!-- Menu right:Sign in -->
+            <ul class="navbar-nav align-items-center text-center">
+                {% if user.is_authenticated %}
+                <li class="nav-item pe-3">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span style="text-transform: capitalize;">{{ user.first_name }}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            {% if request.user.is_staff %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a>
+                            </li>
+                            {% endif %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'sign_out' %}">
+                                Sign out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sign_in' %}">Log in</a>
+                </li>
+                {% endif %}
+            </ul>
+            <ul class="navbar-nav align-items-center text-center">
+                <li class="nav-item pe-2">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span style="text-transform: capitalize;">
+                                {% ifequal LANGUAGE_CODE "en" %}
+                                <span class="flag-icon flag-icon-gb"></span>
+                                {% else %}
+                                <span class="flag-icon flag-icon-br"></span>
+                                {% endifequal %}
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" style="background-color: rgb(37, 35, 35); border: none;">
+                            {% ifequal LANGUAGE_CODE "en" %}
+                            <li class="ms-2"><a href="/pt-br{{ request.get_full_path|slice:'3:' }}"><span class="flag-icon flag-icon-br"></span></a></li>
+                            {% else %}
+                            <li class="ms-2"><a href="/en{{ request.get_full_path|slice:'6:'}}"><span class="flag-icon flag-icon-gb"></span></a></li>
+                            {% endifequal %}
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>    
+                

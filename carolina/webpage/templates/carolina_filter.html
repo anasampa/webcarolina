@@ -1,0 +1,246 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %}
+{% load i18n %} 
+{% get_current_language as LANGUAGE_CODE %}
+
+<!--filter content-->
+{% block content %}
+
+<div class="container pt-3 px-0">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-0">{% translate "Filtros" %}</h3>
+        <h4 class="title_md pb-4">{% translate "versão" %} {{ corpus_version_display }}</h4>
+        <p>{% translate "O Carolina está integralmente disponível para download gratuido. A versão atual é oferecida sem programas de suporte, que estão planejados para lançamentos futuros. " %}
+           {% translate "Ao fazer o download do corpus, você concorda com os " %}<a class="links" href="{% url 'docs' %}">{% translate "Termos de Uso" %}.</a>
+        </p>
+        <p class="my-0"><b>{% translate "Como citar a versão atual do Carolina" %}?</b></p>
+        <p>
+            Crespo, Maria Clara Ramos Morales; Rocha, Maria Lina de Souza Jeannine; 
+            Sturzeneker, Mariana Lourenço; Serras, Felipe Ribas; Mello, Guilherme Lamartine de; 
+            Costa, Aline Silva; Palma, Mayara Feliciano; Mesquita, Renata Morais; Guets, Raquel de Paula; 
+            Silva, Mariana Marques da; Finger, Marcelo; Paixão de Sousa, Maria Clara; Namiuti, Cristiane; 
+            Monte, Vanessa Martins do. 2023. Carolina: a General Corpus of Contemporary Brazilian Portuguese with Provenance, 
+            Typology and Versioning Information. 
+            arXiv preprint arXiv:2303.16098. Disponível em: https://arxiv.org/abs/2303.16098.
+        </p>
+        <!--Filter panel-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="background-color: #e6e6e6;">
+                    <div class="py-1">
+                        <h3 class="title_md text-center pt-3">{% translate "Filtro por atributos" %}</h3>
+                        <div class="title_md text-center" style="font-size:small">{% translate "Selecione as características desejadas e aperte 'Filtrar' para filtrar os textos do Corpus Carolina." %}</div>
+                    </div>
+                </div>
+                <div class="col-lg-9" style="background-color: #e6e6e6; float:right">
+                        {% if texts %}
+                        <a class= "links"  href="{% url 'corpus_download' corpus_version=corpus_version corpus_folder='corpus_download' corpus_selection='corpus_partial' initial=initial %}" download></a>
+                            <div class="modal fade" id="bib{{ cite.publicacao_id }}" tabindex="-1" aria-labelledby="ModalBibLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6>{% translate "Download de textos selecionados" %}</h6>
+                                            <button type="button" class="btn btn-secondary float-end" data-bs-dismiss="modal">x</button>
+                                        </div>
+                                        <div class="modal-body pt-0 pb-0">
+                                        <br>
+                                            <p style = 'color:black'>{% translate "O download pode demorar para iniciar. Permaneça da página." %} {% translate "Deseja continuar?" %} </p>
+                                            <div class="pb-4">
+                                                <a class= "links"  href="{% url 'corpus_download' corpus_version=corpus_version corpus_folder='corpus_download' corpus_selection='corpus_partial' initial=initial %}" download>
+                                                    {% translate "Sim, fazer download. (basta um click)" %} 
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <h3 class="title_md text-center align-top pt-3 mb-0">{% translate "Resultados" %}</h3>
+                        <div class="text-center title_sm pt-1 pb-2 mt-0">
+                            {% translate "Fazer o download dos arquivos dos textos resultantes da sua busca" %}<br>
+                            <button type="button" class="btn btn-sm button-filter float-center" data-bs-toggle="modal" data-bs-target="#bib{{ cite.publicacao_id }}">
+                                Download
+                            </button>
+                        </div>
+                        {% endif %}
+                    </div>    
+                <hr class="my-0 py-0" style="background-color:#e6e6e6; border: 2px black;">
+            </div>
+            <hr class="my-0 py-0" style="background-color:#e6e6e6; border: 2px black;">
+            <div class="row">
+                <div class="col-lg-3 px-0" style="background-color: #e6e6e6">
+                    <div class="table-responsive">
+                        <table class="table tablel" id="inqueritos_list">
+                            <thead>                                              
+                                    <form method="POST" action=# id="selectFilter">
+                                        <tr>
+                                        {% for section, filters in filters_in_sections %}                                
+                                        {% if filters %}
+                                        {% if section == 'Proveniência' or section == 'Provenance' %}
+                                            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#section{{ section }}" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                                            <div class="filter-section pt-2 px-3 mt-2"> 
+                                            <h5 class="filter-section-text">{{ section }}</h5>
+                                            <h6 class="dropdown-toggle pe-1"style="color:white; display: inline; float:right"></h6><hr class="mt-0 mb-1"/>
+                                            </div>    
+                                            </a>
+                                        <div class="collapse" id="section{{ section }}">
+                                        {% else %}
+                                            <div class="filter-section pt-2 px-3 mt-2"> 
+                                            <h5 class="filter-section-text">{{ section }}</h5>
+                                            </div>   
+                                        {% endif %}    
+                                        {% for filter in filters %}
+                                        {% if filter.type == 'select' %}
+                                            <div class="px-3 py-1">
+                                                {{ filter.frontname }} 
+                                                {% if filter.msg %}
+                                                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="{{ filter.msg }}">
+                                                <i class="bi bi-info-circle" style="color: blue;"></i></span>
+                                                {% endif %}
+                                                <select class="form-select shadow-none mx-0 selectfilter" id="{{ filter.namecss }}" for="selectFilter" aria-label="Default select" name='{{ filter.name }}'> 
+                                                <option class="ps-0 pe-0" value="all" selected>{% translate "sem seleção" %}</option>
+                                                {% for option in filter.options %}
+                                                <option class="ps-0 pe-0 ms-0 me-0" value="{{ option.0 }}">{{ option.1 }}</option>
+                                                {% endfor %}
+                                            </select>
+                                            </div>
+                                        {% elif filter.type == 'numeric' %}
+                                        <div class="col-12 textfilter" style="display:inline-block">
+                                            <div class="px-3 py-2">
+                                                {{ filter.frontname }} 
+                                                {% if filter.msg %}
+                                                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="{{ filter.msg }}">
+                                                <i class="bi bi-info-circle" style="color: blue;"></i></span>
+                                                {% endif %}
+                                                </br>
+                                                <div style="display: table">
+                                                    <div class="px-2" style="display:table-cell">min <input type="text" id="{{ filter.name }}min" name="{{ filter.name }}min" class="form-control" placeholder='{% translate "valor mínimo" %}' aria-describedby="minimum value"></div>
+                                                    <div class="px-2" style="display:table-cell">max <input type="text" id="{{ filter.name }}max" name="{{ filter.name }}max" class="form-control" placeholder='{% translate "valor máximo" %}' aria-describedby="maximum value"></div>
+                                                </div>               
+                                            </div>    
+                                        </div>                                    
+                                        {% else %}
+                                        <div class="col-12 textfilter" style="display:inline-block">
+                                            <div class="px-3 py-2">
+                                                {{ filter.frontname }}
+                                                <input type="text" id="{{ filter.name }}" name="{{ filter.name }}" class="form-control" placeholder='{% translate "Escreva para filtrar" %}' aria-describedby="find word">               
+                                            </div>    
+                                        </div>
+                                        {% endif %}                               
+                                        {% endfor %}
+                                        {% if section == 'Proveniência' or section == 'Provenance' %}
+                                        </div>
+                                        {% endif %}
+                                        {% endif %}
+                                        {% endfor %}
+                                        <tr>
+                                            <hr class="mt-0 mb-0"/>
+                                            <div class="row pt-3 pb-1 mx-0">
+                                            <div class="col-8">
+                                            </div><div class="col-4">
+                                                <button class="btn button-filter float-end" type="submit" for="selectFilter" id="corpusFilter">{% translate "Filtrar" %}</button>
+                                            </div>
+                                            </div>
+                                        </tr>
+                                    </form>
+                                </tr>                    
+                                <!--Menu colapsed from filter (small screen)-->
+                                <tr>
+                                    <td colspan="11" class="d-xxl-none pt-0 pb-0">
+                                        <div class="collapse d-xxl-none" id="collapseFilter">
+                                            <div class="row">
+                                                <form class="float-end px-0" method="POST" action=# id="selectFilterSmall">   
+                                                    {% for filter in filters %}
+                                                    <div class="col-12 ps-2">
+                                                        <select class="form-select shadow-none ps-1" aria-label="Default select" name='{{ filter.name }}'>
+                                                            <option value="all" selected>{{ filter.frontname }}</option>
+                                                            {% for option in filter.options %}
+                                                            <option value="{{ option.0 }}">{{ option.1 }}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                    {% endfor %}
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <hr class="my-0 py-0" style="border-top: 3px solid black" />
+                    <div>
+                        <form method="POST" action=# id="searchID">
+                            <div class="row gx-0 align-items-center pt-4 pb-4 pe-2"  style="background-color:#e6e6e6;">
+                                <span class="ps-3">{% translate "Busca por ID do texto" %}</span>
+                                <div class="col-9 ps-3">
+                                    <input type="text" id="idtext" name="textcode" class="form-control" placeholder='{% translate "Digite um ID" %}' aria-describedby="search text by id">               
+                                </div>
+                                <div class="col-3 ps-1 pe-1">
+                                    <button class="btn btn-secondary btn-sm" type="submit" for="searchTermLX" id="searchButton">{% translate "Filtrar" %} ID</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col d-flex" style="background-color: white;">     
+                    <!-- ---RESULTS---  -->         
+                    <div class="results">
+                        <p class="sticky-top py-0 my-0" style="color:#a3a1a1"> 
+                            {% if status != 200 %}
+                            {{ status }} 
+                            {% else %}
+                            {% translate "Resultados" %}
+                            {% endif %}
+                        </p>
+                        <hr class="mt-1 mb-0"/>
+                        <div style="overflow: auto; max-height: 1600px;">
+                        <table class="table table-fixed table-striped caption-top filter-results  table-borderless"id="result_list" style="table-layout:fixed; word-wrap:break-word;border-collapse: separate;">
+
+                            <thead class="sticky-top" style="background-color: white;">
+                                <tr>    
+                                    <th scope="col" class="bottom-rule column-text_id">         
+                                        <div class="text"><a href="?o=1">{% translate "ID do texto" %}</a></div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col" class="bottom-rule column-corpus_version"> 
+                                        <div class="text"><a href="?o=2">{% translate "Documento" %}</a></div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col" class="bottom-rule column-text_typology">
+                                        <div class="text"><a href="?o=3">{% translate "Domínio" %}</a></div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col" class="bottom-rule column-curation_date_download">
+                                        <div class="text"><a href="?o=5">{% translate "Data de download" %}</a></div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col" class="bottom-rule column-origin_license_name">
+                                        <div class="text"><a href="?o=7">{% translate "Licença no Carolina" %}</a></div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% if texts %}
+                                {% for text in texts %}    
+                                <tr>
+                                    <th class="field-text_id" style="min-width:min-content;"><a href="{% url 'text_info' text_id=text.text_id %}" target='_blank'>{{ text.text_id }}</a></th>
+                                    <td class="field-file_name">{{ text.file_path }}</td>
+                                    <td class="field-text_domain">{{ text.text_domain}}</td>
+                                    <td class="field-curation_date_download nowrap">{{ text.curation_date_download }}</td>
+                                    <td class="field-origin_license_name">{{ text.curation_license_name }}</td>
+                                    {% autoescape off %}{{ inquerito.phrase }}{% endautoescape %}
+                                </tr>       
+                                {% endfor %}
+                                {% endif %}
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

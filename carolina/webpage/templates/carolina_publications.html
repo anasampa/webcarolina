@@ -1,0 +1,39 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %} 
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-3">{% translate "Publicações" %}</h3>
+        <ul class="pt-2">
+            {% for cite in publications %}
+            <!--cite-->
+            <li class="pb-5">
+                {% autoescape off %}{{ cite.publicacao }}{% endautoescape %}
+                {% if cite.link %}<a class="links" href="{{ cite.link }}" target="_blank">(link)</a>{% endif %}
+                {% if cite.bibtex %}<a class="popup" data-bs-toggle="modal" 
+                data-bs-target="#bib{{ cite.publicacao_id }}"
+                style="color: #419dbe; text-decoration:none; cursor: pointer">
+                    (bib)</a>{% endif %}
+            </li>
+            <!--bibtex box-->
+            <div class="modal fade" id="bib{{ cite.publicacao_id }}" tabindex="-1" aria-labelledby="ModalBibLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">bib</h1>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">x</button>
+                        </div>
+                        <div class="modal-body pt-0 pb-0">
+                            <pre>{% autoescape off %}{{ cite.bibtex }}{% endautoescape %}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

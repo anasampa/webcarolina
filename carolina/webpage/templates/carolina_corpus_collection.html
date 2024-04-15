@@ -1,0 +1,59 @@
+{% extends 'carolina_option11.html' %} 
+{% load static %} 
+{% load i18n %}
+
+{% block content %}
+<div class="container pt-3 px-5">
+    <div class="mb-5 responsive-font-example">
+        <h3 class="title_md text-left pt-4 pb-2">{% translate "Coleção do Corpus Carolina" %}</h3>
+        <h4 class="title_md pb-0">{% translate "versão" %} {{ corpus_version_display }}</h4>
+        {% translate "Os dados de cada corpus, incluindo o endereço eletrônico da licença de origem, remetem às informações fornecidas na origem, não sendo alterados pela equipe do Carolina." %} 
+
+        {% for tema in temas %}
+        {% if tema.tema_id != 1 %}
+        <div class="card card-body mt-2">
+            <h4 class="title_sm">{{ tema.tema_nome }}</h4>
+            {% load humanize %}
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'en' %}
+            <p>
+                <b>{{ tema.n_palavras|intcomma }} words</b></br>
+                <b>{{ tema.n_textos|intcomma }} texts</b>
+            </p>
+            {% else %}
+            <p>
+                <b>{{ tema.n_palavras|intcomma }} {% translate " palavras" %}</b></br>
+                <b>{{ tema.n_textos|intcomma }} {% translate " textos" %}</b>
+            </p>
+            {% endif %}
+            <a class="links corpus-show-button" data-bs-toggle="collapse" href="#tema{{ tema.tema_id }}" role="button" aria-expanded="false" aria-controls="collapsedataeoutros">
+                {% translate "Ver lista completa" %}</a>
+            {% for trio,corpus_group in corpus_tema_group.items %}
+            {% if trio.1 == tema.tema_nome %}
+            <div class="collapse" id="tema{{ tema.tema_id }}">
+                <div class="card card-body">
+                <p class="cell subheader">{{ trio.2 }}</p>
+                {% for corpus in corpus_group %}
+                    <div class="corpus-summary">
+                        <p class="cell subgrupo"> {{ corpus.corpus_nome }} </p>
+                        {% if corpus.autoridade and corpus.autor %}
+                        <p class="cell autor"> {{ corpus.autoridade }}; {{ corpus.autor }} </p>
+                        {% else %}
+                        <p class="cell autor"> {{ corpus.autoridade }}{{ corpus.autor }} </p>
+                        {% endif %}
+                        <p class="cell mantenedor"> {{ corpus.mantenedor }} </p>
+                        <p class="cell corpusurl"> {{ corpus.url }} </p>
+                        <p class="cell licença"> {{ corpus.licenca }} </p>
+                        <p class="cell licençaurl"> {{ corpus.url_licenca }} </p>
+                    </div><hr class="my-2 mx-3"/>
+                {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
